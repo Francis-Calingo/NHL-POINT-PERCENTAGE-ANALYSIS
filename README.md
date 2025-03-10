@@ -1,8 +1,6 @@
 # PROJECT OVERVIEW: NHL Point Percentage Analysis (with Python)
 
 ## Table of Contents
-
-## Table of Contents
 * [Introduction](#introduction)
 * [Code and Resources Used](#code-and-resources-used)
 * [Data Cleaning and Preprocessing](#data-cleaning-and-preprocessing)

@@ -1,4 +1,17 @@
 # PROJECT OVERVIEW: NHL Point Percentage Analysis (with Python)
+
+## Table of Contents
+
+## Table of Contents
+* [Introduction](#introduction)
+* [Code and Resources Used](#code-and-resources-used)
+* [Data Cleaning and Preprocessing](#data-cleaning-and-preprocessing)
+* [Time-Series Analysis](#time-series-analysis)
+* [Further Analysis](#further-analysis)
+* [Discussion](#discussion)
+  
+## Introduction
+
   <ul>
     <li>Performed data visualizations (i.e., time series analysis) and analyzed playoff performances of NHL Regular season champions (President Trophy winners), as well as regular season performances of Stanley Cup finalists and winners.</li>
     <li>Scraped data from the NHL's website, collecting data from 1967 onwards (when the league expanded beyond 6 teams permanently).</li>

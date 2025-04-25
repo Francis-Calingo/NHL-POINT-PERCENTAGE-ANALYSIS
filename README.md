@@ -2,7 +2,7 @@
 
 ## Table of Contents
 * [Introduction](#introduction)
-* [Code and Resources Used](#code-and-resources-used)
+* [Code and Setup](#code-and-setup)
 * [Data Cleaning and Preprocessing](#data-cleaning-and-preprocessing)
 * [Time-Series Analysis](#time-series-analysis)
 * [Further Analysis](#further-analysis)
@@ -17,12 +17,19 @@
 
 </details>
 
-<details><summary><h2>Code and Resources Used</h2></summary> 
+<details><summary><h2>Code and Setup</h2></summary> 
   <ul>
     <li><b>IDEs Used:</b> Google Colab, Jupyter Notebook</li>
     <li><b>Python Version:</b> 3.10.12</li>
     <li><b>Libraries and Packages:</b> pandas, plotly.express, matplotlib, Dash</li>
   </ul>
+
+If you'd like to fork or run this locally:
+
+```bash
+git clone https://github.com/Francis-Calingo/NHL-POINT-PERCENTAGE-ANALYSIS.git
+cd NHL-POINT-PERCENTAGE-ANALYSIS
+```
 
 </details>
 

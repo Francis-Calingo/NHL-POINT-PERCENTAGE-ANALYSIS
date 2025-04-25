@@ -33,6 +33,7 @@ git clone https://github.com/Francis-Calingo/NHL-POINT-PERCENTAGE-ANALYSIS.git
 cd NHL-POINT-PERCENTAGE-ANALYSIS
 ```
 
+To install the necessary Python libraries and packages:
 ```bash
 pip install -r requirements.txt
 ```

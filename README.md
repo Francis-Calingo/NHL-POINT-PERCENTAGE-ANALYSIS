@@ -8,6 +8,8 @@
 * [Further Analysis](#further-analysis)
 * [Discussion](#discussion)
 * [Credits and Acknowledgements](#credits-and-acknowledgements)
+
+---
   
 # Introduction
   <ul>

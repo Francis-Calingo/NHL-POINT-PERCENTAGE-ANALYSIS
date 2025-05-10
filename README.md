@@ -23,12 +23,6 @@ This project analyzes the point percentages of Stanley Cup winners, finalists, a
 
 * Have these relationships changed with different eras of the NHL?
 
-  <ul>
-    <li>Performed data visualizations (i.e., time series analysis) and analyzed playoff performances of NHL Regular season champions (President Trophy winners), as well as regular season performances of Stanley Cup finalists and winners.</li>
-    <li>Scraped data from the NHL's website, collecting data from 1967 onwards (when the league expanded beyond 6 teams permanently).</li>
-    <li>Imported Dash for interactivity.</li>
-  </ul>
-
 [<b>Back to Table of Contents</b>](#table-of-contents)
 
 ---
@@ -105,6 +99,40 @@ New_df
 Code snippet:
 
 ```python
+app = Dash(__name__)
+
+Scatter_Plot = px.scatter(New_df, x='YEAR', y="POINTS %", color="TYPE", trendline="rolling", trendline_options=dict(window=5),
+                title="Win Percentage of NHL Cup Finalists and Regular Season Champions. with 5-Year Rolling Average",
+                hover_name="TEAM", width=1200, height=800)
+
+app.layout = html.Div(children=[
+    html.H1(children='Hello Dash'),
+
+    html.Div(children='''
+        Dash: A web application framework for your data.
+    '''),
+
+    dcc.Graph(
+        id='example-graph',
+        figure=Scatter_Plot
+    )
+])
+
+if __name__ == '__main__':
+    app.run(debug=True)
+```
+
+Facet_col visualization of the three trend lines:
+
+<img width="896" alt="image" src="https://github.com/user-attachments/assets/3533b896-2d07-40c1-9fa6-cb156807692a" />
+
+Code snippet:
+
+```python
+Scatter_Plot2 = px.scatter(New_df, x='YEAR', y="POINTS %", color="TYPE", trendline="rolling", trendline_options=dict(window=5),
+                title="Win Percentage of NHL Cup Finalists and Regular Season Champions. with 5-Year Rolling Average",
+                facet_col="TYPE", hover_name="TEAM", width=1200, height=800) #Using facet_col to make it easier to vizualise the three trendlines.
+Scatter_Plot2
 ```
 
 [<b>Back to Table of Contents</b>](#table-of-contents)
@@ -123,7 +151,13 @@ Code snippet:
 
 # Discussion
 
-<p> Despite the increasingly competitive nature of the league (as demonstrated by the time-series plot showing that, in general, both the Stanley Cup finalists and regular season champions are not performing as well in the regular season and the playoffs, respectively, as their 1970s counterparts), it appears that, more often than not, when it comes to the Stanley Cup finals, the team with a higher regular season point total will more than likely win the Stanley Cup over their opponent. Therefore, if you are placing bets at every Stanley Cup Final, you should always definitely bet on the team with the better regular season record. </p>
+<p> Despite the increasingly competitive nature of the league (as demonstrated by the time-series plot showing that, in general, both the Stanley Cup finalists and regular season champions are not performing as well in the regular season and the playoffs, respectively, as their 1970s counterparts), it appears that, more often than not, when it comes to the Stanley Cup finals, the team with a higher regular season point total will more than likely win the Stanley Cup over their opponent. Here is what that entails for different relevant parties:</p>
+
+* **For hockey analysts**: Consider performance consistency and opponent strength rather than point totals alone when predicting playoff outcomes.
+
+* **For teams**: Regular season perfomance no longer guarantees playoff success as much as it did in prior eras, especially in the age of the salary cap. Coaches must consider other factors in their playoff matchups besides suface comparisons of regular season performance. For example, facing the same opponent sparsely during the regular season is much different from facing them at least 4 consecutive times.
+
+* **For the sports betting industry**: Utilizing the trend lines, as well as understanding that, more often than not, NHL teams that finish with the higher point percentage will win the Cup than their opponent in the Finals, will help adjust their odds calculations accordingly.
 
 [<b>Back to Table of Contents</b>](#table-of-contents)
 </details>
@@ -131,5 +165,7 @@ Code snippet:
 ---
 
 # Credits and Acknowledgements
+
+"Linear and Non-Linear Trendlines in Python". Plotly, https://plotly.com/python/linear-fits/. 
 
 [<b>Back to Table of Contents</b>](#table-of-contents)

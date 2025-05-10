@@ -1,6 +1,8 @@
 # PROJECT OVERVIEW: NHL Point Percentage Analysis (with Python)
 
-## Table of Contents
+# 
+
+# Table of Contents
 * [Introduction](#introduction)
 * [Code and Setup](#code-and-setup)
 * [Data Cleaning and Preprocessing](#data-cleaning-and-preprocessing)
@@ -12,6 +14,15 @@
 ---
   
 # Introduction
+
+This project analyzes the point percentages of Stanley Cup winners, finalists, and regular season champions across NHL history, using season-by-season trends and 5-year rolling averages. The goal is to uncover long-term patterns in elite team performance and explore how regular-season dominance correlates with playoff success. This project seeks to explore the following questions:
+
+* How closely do regular season champions align with Stanley Cup winners?
+
+* Do Cup-winning teams show consistent performance patterns across decades?
+
+* Have these relationships changed with different eras of the NHL?
+
   <ul>
     <li>Performed data visualizations (i.e., time series analysis) and analyzed playoff performances of NHL Regular season champions (President Trophy winners), as well as regular season performances of Stanley Cup finalists and winners.</li>
     <li>Scraped data from the NHL's website, collecting data from 1967 onwards (when the league expanded beyond 6 teams permanently).</li>
@@ -57,9 +68,29 @@ pip install -r requirements.txt
 
 # Data Cleaning and Preprocessing
 
-<ul>
-    <li>Dropped na rows, which should correspond to 2005, as there was a lockout that cancelled the entire 2004-05 season.</li>
-</ul>
+The csv file containing the data has **672 entries (168 records x 4 fields).**
+**Head (first 5 rows) and tail (last 5 rows) of the csv:**
+
+| YEAR | TEAM | POINTS % | TYPE |
+|----|----|----|----|
+|1968|Montreal Canadiens|0.635|WINNER|
+|1969|Montreal Canadiens|0.678|WINNER|
+|1970|Boston Bruins|0.651|WINNER|
+|1971|Montreal Canadiens|	0.622|WINNER|
+|1972|Boston Bruins|0.763|WINNER|
+|----|----|----|----|
+|2019|Tampa Bay Lightning|0.780|REGULAR SEASON CHAMPION|
+|2020|Boston Bruins|0.713|REGULAR SEASON CHAMPION|
+|2021|Colorado Avalanche|0.732|REGULAR SEASON CHAMPION|
+|2022|Florida Panthers|	0.744|REGULAR SEASON CHAMPION|
+|2023|Boston Bruins|0.823|REGULAR SEASON CHAMPION|
+
+After loading this csv into a Jupyter Notebook, na rows were dropped. Three rows should correspond to 2005, as there was a lockout that cancelled the entire 2004-05 season.
+
+```python
+New_df=df.dropna() #Remove the data for 2005. It should drop 3 rows.
+New_df
+```
 
 [<b>Back to Table of Contents</b>](#table-of-contents)
 
@@ -70,6 +101,11 @@ pip install -r requirements.txt
 <p>The plot demonstrates that regular season performances peaked in the 1970s, declined over time in the mid-90s, before slowly climbing up and mostly stabilizing somewhere in the middle (although the historic performances of the 2018-19 Tampa Bay Lightning and the 2022-23 Boston Bruins teams help the regular season champion trendline almost creep up to its previous historic highs). </p>
 
 ![newplot](https://github.com/user-attachments/assets/88db03af-247f-4e42-ab18-3c2b370e0ace)
+
+Code snippet:
+
+```python
+```
 
 [<b>Back to Table of Contents</b>](#table-of-contents)
 

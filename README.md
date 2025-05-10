@@ -1,6 +1,4 @@
-# PROJECT OVERVIEW: NHL Point Percentage Analysis (with Python)
-
-# 
+# What Makes a Stanley Cup Champion?: A Time Series Analysis of NHL Point Percentages (1968–2023)
 
 # Table of Contents
 * [Introduction](#introduction)
